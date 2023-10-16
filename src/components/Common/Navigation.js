@@ -13,12 +13,12 @@ function WebNavigation() {
     <>
       <nav className="bg-gray-50 h-[80px] shadow-lg fixed top-0 z-10 w-full">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src={Logo} className="h-12 mr-3" alt=" Logo" />
             <span className="font-semibold text-black text-xl">
               John's Medicals
             </span>
-          </a>
+          </Link>
           <button
             onClick={toggleMobileMenu}
             type="button"
@@ -28,7 +28,6 @@ function WebNavigation() {
             <svg
               className="w-5 h-5"
               aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 17 14"
             >
