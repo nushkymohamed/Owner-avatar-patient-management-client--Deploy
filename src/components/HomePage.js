@@ -14,38 +14,38 @@ function HomePage() {
       </div>
 
       <div className="md:flex gap-[20px] pt-[20px]">
-        <a href="/Listpatients">
+        <Link to="/Listpatients">
           <div className="text-lg text-white h-[125px] w-[250px] text-center bg-yellow-400 border rounded-lg shadow-md hover:bg-yellow-300">
             <div className="pt-[25px]"> Manage Patients</div>
             <div className="pt-[10px]">
               <Person2Icon fontSize="large" />
             </div>
           </div>
-        </a>
-        <a href="/Listprescriptions">
+        </Link>
+        <Link to="/Listprescriptions">
           <div className="text-lg  text-white h-[125px] w-[250px] text-center bg-red-700 border rounded-lg shadow-md hover:bg-red-600">
             <div className="pt-[25px]"> Prescriptions</div>
             <div className="pt-[10px]">
               <MedicationIcon fontSize="large" />
             </div>
           </div>
-        </a>
-        <a href="/ListBillPayments">
+        </Link>
+        <Link to="/ListBillPayments">
           <div className="text-lg  text-white h-[125px] w-[250px] text-center bg-green-600 border rounded-lg shadow-md hover:bg-green-500">
             <div className="pt-[25px]"> Bill Payments </div>
             <div className="pt-[10px]">
               <PaymentIcon fontSize="large" />
             </div>
           </div>
-        </a>
-        <a href="/RevenueReport">
+        </Link>
+        <Link to="/RevenueReport">
           <div className="text-lg  text-white h-[125px] w-[250px] text-center bg-blue-400 border rounded-lg shadow-md hover:bg-blue-300">
             <div className="pt-[25px]"> Revenue Reports </div>
             <div className="pt-[10px]">
               <AssessmentIcon fontSize="large" />
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );
