@@ -86,7 +86,7 @@ function ListPrescriptions() {
     console.log('Deleting prescription with ID:', prescriptionId);
     axios
       .delete(
-        `https://johnsmedicals-patient-management-service.onrender.com/${prescriptionId}`
+        `https://johnsmedicals-patient-management-service.onrender.com/prescriptions/${prescriptionId}`
       )
       .then(() => {
         setPrescriptions(
