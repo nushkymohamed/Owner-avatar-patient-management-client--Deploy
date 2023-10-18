@@ -41,7 +41,7 @@ export const CreatePatient = () => {
 
     axios
       .post(
-        'https://johnsmedicals-patient-management-service.onrender.com0/patients',
+        'https://johnsmedicals-patient-management-service.onrender.com/patients',
         data
       )
       .then((response) => {
