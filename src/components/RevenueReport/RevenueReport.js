@@ -7,7 +7,6 @@ const RevenueReport = () => {
 
   const generateReport = async () => {
     try {
-      // Send a GET request to the API to generate the revenue report
       const response = await axios.get(
         `https://johnsmedicals-patient-management-service.onrender.com/reports/revenue-report?startDate=${startDate}&endDate=${endDate}`,
         {
@@ -15,11 +14,11 @@ const RevenueReport = () => {
         }
       );
 
-      // Create a URL for the generated PDF
+     
       const blob = new Blob([response.data], { type: 'application/pdf' });
       const pdfUrl = URL.createObjectURL(blob);
 
-      // Open the PDF in a new tab
+    //store the report later in cloudinary or any other cloud storage
       window.open(pdfUrl);
     } catch (error) {
       console.error('Error generating revenue report:', error);

@@ -20,7 +20,7 @@ export const EditPatient = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch the post data from the external API when the component mounts
+    
     axios
       .get(`https://johnsmedicals-patient-management-service.onrender.com/patients/${patientId}`)
       .then((response) => {
@@ -51,7 +51,7 @@ export const EditPatient = () => {
     formData.append('notes', formData.notes);
     formData.append('date', formData.date);
 
-    // Send the updated data back to the external API
+    // Sending the updated data back to the external API
     axios
       .put(`https://johnsmedicals-patient-management-service.onrender.com/patients/${patientId}`, patientData)
       .then((response) => {

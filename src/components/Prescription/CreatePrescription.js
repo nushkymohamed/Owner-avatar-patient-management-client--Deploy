@@ -10,7 +10,7 @@ export const CreatePrescription = () => {
   const [formData, setFormData] = useState({
     patient: '',
     date: '',
-    files: [], // Change to an array to store multiple files
+    files: [],
   });
 
   const [patients, setPatients] = useState([]);
@@ -25,7 +25,7 @@ export const CreatePrescription = () => {
         setPatients(response.data);
       })
       .catch((error) => {
-        // Handle error
+       
       });
   }, []);
 
@@ -46,7 +46,7 @@ export const CreatePrescription = () => {
     data.append('patient', formData.patient);
     data.append('date', formData.date);
 
-    // Append all the selected files to the FormData
+
     for (let i = 0; i < formData.files.length; i++) {
       data.append('files', formData.files[i]);
     }
@@ -63,7 +63,7 @@ export const CreatePrescription = () => {
         setFormData({
           patient: '',
           date: '',
-          files: [], // Reset to an empty array
+          files: [], 
         });
       });
   };
@@ -127,7 +127,7 @@ export const CreatePrescription = () => {
               onChange={handleImageChange}
               className="form-input mt-1 block w-full rounded-md border-gray-300 pt-[5px]"
               accept="files/*"
-              multiple // Allow multiple files to be selected
+              multiple 
               required
             />
           </div>

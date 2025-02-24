@@ -91,11 +91,10 @@ function ListPrescriptions() {
       .then(() => {
         setPrescriptions(
           prescriptions.filter(
-            (prescription) => prescription._id !== prescriptionId // Use _id instead of id
+            (prescription) => prescription._id !== prescriptionId 
           )
         );
         toast.success('Prescription deleted successfully', { autoClose: 3000 });
-        // Instead of window.location.reload(false), you can remove the deleted item from filteredPrescriptions
         setFilteredPrescriptions(
           filteredPrescriptions.filter((p) => p._id !== prescriptionId)
         );
@@ -117,7 +116,7 @@ function ListPrescriptions() {
     const lowerCaseText = text.toLowerCase();
     const filtered = prescriptions.filter((prescription) => {
       return (
-        prescription.patient.name.toLowerCase().includes(lowerCaseText) || // Access patient's name as patient.name
+        prescription.patient.name.toLowerCase().includes(lowerCaseText) || 
         prescription.date.toLowerCase().includes(lowerCaseText)
       );
     });
@@ -175,8 +174,7 @@ function ListPrescriptions() {
         <div className="pt-[20px]">
           <Box sx={{ width: '100%' }}>
             <DataGrid
-              rows={filteredPrescriptions} // Use filteredPrescriptions
-              columns={columns}
+              rows={filteredPrescriptions} 
               initialState={{
                 pagination: {
                   paginationModel: {
